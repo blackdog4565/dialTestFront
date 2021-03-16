@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/jquery-3.1.1.min.js"></script>
+
+    <title>Dial Test</title>
+    <style></style>
+  </head>
+  <body>
+    <div class="app">
+      <div class="wrapper">
+        <form class="userAuth" id="authForm">
+          <h3 class="headerDivAuth">Введите имя пользователя и пароль</h3>
+          <input
+            class="userAuthInput"
+            type="text"
+            name="user"
+            id="user"
+            placeholder="Имя пользователя"
+            autofocus
+          />
+          <input
+            class="userAuthInput"
+            type="password"
+            name="pass"
+            id="pass"
+            placeholder="Пароль"
+          />
+          <button class="userAuthButton" id="buttonInfo">Войти</button>
+        </form>
+        <!-- <h1 id="a">1qwe</h1> -->
+        <!-- <form action="" method="post"></form> -->
+
+        <form class="measuringForm" id="measuringForm">
+          <div class="headerDivCreate">
+            <h3 class="headerForm">Записать измерения</h3>
+            <button class="userExitButton" id="buttonExit">Выйти</button>
+          </div>
+          <div class="date">
+            <p>Текущая дата: <span id="cur_date"></span></p>
+            <p>Текущее время: <span id="cur_time"></span></p>
+          </div>
+          <div class="department">
+            <span>Выберите отделение:</span>
+            <select class="options" name="depart" id="depart"></select>
+          </div>
+          <div class="valuesClap">
+            <div class="firstRaw">
+              <p class=""></p>
+              <p class="">Капельница</p>
+              <p class="">Дренаж</p>
+              <p class="">Мат</p>
+            </div>
+            <div class="raw">
+              <p>Номер клапана полива</p>
+              <p>Объем</p>
+              <p>ЕС</p>
+              <p>pH</p>
+              <p>Объем</p>
+              <p>ЕС</p>
+              <p>pH</p>
+              <p>ЕС</p>
+              <p>pH</p>
+            </div>
+            <div id="otherRaws"></div>
+          </div>
+          <div class="userName">
+            <p>Измерение выполнил: <span class="userNameSpan" id="userName"></span></p>
+          </div>
+          <button id="sendMeasures" class="userAuthButton sendButton">
+            Отправить
+          </button>
+
+          <button id="openReportForm" class="userAuthButton openReportButton">
+            Открыть форму составления отчета
+          </button>
+        </form>
+        <form id="createReport" class="createReport">
+          <div class="headerDivCreate">
+            <h3 class="headerForm">Выберите параметры для отчета</h3>
+            <button class="userExitButton" id="buttonExit1">Выйти</button>
+          </div>
+          <div class="department chooseDep">
+            <span>Выберите отделение:</span>
+            <select class="options" name="depart1" id="depart1"></select>
+
+            <span>Выберите номер клапана:</span>
+            <select class="options" name="valve1" id="valve1"></select>
+
+            <!-- <span>Выберите период:</span> -->
+          </div>
+          <button id="createReportBut" class="userAuthButton sendButton">
+            Составить отчет
+          </button>
+          <button id="closeReportForm" class="userAuthButton openReportButton">
+            Отмена
+          </button>
+        </form>
+        <div class="valuesClapReport" id="valuesClapReport">
+          <div class="valuesClap">
+            <div class="firstRawReport">
+              <p class=""></p>
+              <p class="">Капельница</p>
+              <p class="">Дренаж</p>
+              <p class="">Мат</p>
+            </div>
+            <div class="rawReport">
+              <p>Номер клапана</p>
+              <p>Отделение</p>
+              <p>Время измерения</p>
+              <p>Объем</p>
+              <p>ЕС</p>
+              <p>pH</p>
+              <p>Объем</p>
+              <p>ЕС</p>
+              <p>pH</p>
+              <p>ЕС</p>
+              <p>pH</p>
+            </div>
+            <div id="otherRawsReport"></div>
+          </div>
+          <a href="" class="saveReport userAuthButton sendButton" id="saveReport">
+            Сохранить отчет
+          </a>
+        </div>
+      <div class="errorReport" id="errorReport">
+        <div class="innerSuccess">
+          <p>Не удалось загрузить данные</p>
+        </div>
+      </div>
+      <div class="successWrap" id="success">
+        <div class="innerSuccess">
+          <p>Данные успешно отправлены</p>
+        </div>
+      </div>
+      <div class="unSuccessWrap" id="unSuccess">
+        <div class="innerSuccess">
+          <p>При отправке возникла ошибка</p>
+        </div>
+      </div>
+      <div class="unSuccessWrapAuth" id="unSuccessAuth">
+        <div class="innerSuccess">
+          <p>Неверные данные</p>
+        </div>
+      </div>
+      
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
